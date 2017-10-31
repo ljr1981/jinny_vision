@@ -11,9 +11,21 @@ class
 	JV_PRINT_DIALOG_TEST_SET
 
 inherit
-	EXTENDED_TEST_SET
+	EQA_TEST_SET
+		rename
+			assert as assert_old
 		redefine
 			on_prepare
+		end
+
+	EQA_COMMONLY_USED_ASSERTIONS
+		undefine
+			default_create
+		end
+
+	TEST_SET_BRIDGE
+		undefine
+			default_create
 		end
 
 	EV_KEY_CONSTANTS

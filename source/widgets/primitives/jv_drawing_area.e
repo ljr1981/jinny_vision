@@ -8,6 +8,9 @@ class
 
 inherit
 	EV_DRAWING_AREA
+		redefine
+			draw_rotated_text
+		end
 
 feature -- Access
 
@@ -84,7 +87,7 @@ feature -- Drawing operations
 	draw_rotated_text (a_x, a_y: INTEGER; a_angle: REAL; a_text: READABLE_STRING_GENERAL)
 			-- Draw `a_text' rotated with left of baseline at (`a_x', `a_y') using `font'.
 			-- Rotation is number of `a_angle' radians counter-clockwise from horizontal plane.
-		require
+		require else
 			not_destroyed: not is_destroyed
 			a_text_not_void: a_text /= Void
 		do

@@ -8,8 +8,20 @@ class
 	JV_DATE_FIELD_TEST_SET
 
 inherit
-	EXTENDED_TEST_SET
+	EQA_TEST_SET
+		rename
+			assert as assert_old
+		end
 
+	EQA_COMMONLY_USED_ASSERTIONS
+		undefine
+			default_create
+		end
+
+	TEST_SET_BRIDGE
+		undefine
+			default_create
+		end
 feature -- Tests
 
 	test_mouse_scroll
@@ -58,7 +70,7 @@ feature -- Tests
 			create l_date.make (1955, 11, 05)
 			l_field.set_date (l_date)
 			assert_strings_equal ("date_in_field", "11/05/1955", l_field.text)
-			assert_equals ("date_from_field_matches_original_date", l_date, l_field.date)
+			assert_equal ("date_from_field_matches_original_date", l_date, l_field.date)
 		end
 
 end
