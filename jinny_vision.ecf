@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-16-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-16-0 http://www.eiffel.com/developers/xml/configuration-1-16-0.xsd" name="jinny_vision" uuid="7C7CFC44-3E38-4235-977E-52B6C6F9DC88" library_target="jinny_vision">
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-18-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-18-0 http://www.eiffel.com/developers/xml/configuration-1-18-0.xsd" name="jinny_vision" uuid="7C7CFC44-3E38-4235-977E-52B6C6F9DC88" library_target="jinny_vision">
 	<description>Jinny EiffelVision Extension</description>
 	<target name="test">
 		<root all_classes="true"/>
-		<option is_obsolete_routine_type="true">
+		<option is_obsolete_routine_type="true" manifest_array_type="mismatch_warning">
 		</option>
 		<capability>
 			<concurrency support="none"/>
@@ -11,7 +11,7 @@
 		</capability>
 		<library name="base" location="$ISE_LIBRARY\library\base\base-safe.ecf"/>
 		<library name="decimal" location="$ISE_LIBRARY\contrib\library\math\decimal\decimal\decimal-safe.ecf"/>
-		<library name="test_extension" location="$GITHUB\test_extension\test_extension.ecf"/>
+		<library name="test_extension" location="iron:test_extension:test_extension.ecf"/>
 		<library name="testing" location="$ISE_LIBRARY\library\testing\testing-safe.ecf"/>
 		<library name="time" location="$ISE_LIBRARY\library\time\time-safe.ecf"/>
 		<library name="vision2" location="$ISE_LIBRARY\library\vision2\vision2-safe.ecf">
